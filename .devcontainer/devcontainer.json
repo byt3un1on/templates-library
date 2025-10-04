@@ -1,0 +1,47 @@
+{
+	"name": "Golang",
+	"build": {
+		"dockerfile": "./Dockerfile",
+		"context": ".."
+	},
+	"postCreateCommand": "bash .devcontainer/onstart.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+                "golang.Go",
+				"ms-azuretools.vscode-docker",
+				"EditorConfig.EditorConfig",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"s-nlf-fh.glassit",
+				"vscodevim.vim",
+				"tomoki1207.pdf",
+				"redhat.vscode-xml"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.profiles.linux": {
+					"ash": {
+						"path": "/bin/ash"
+					},
+					"bash": {
+						"path": "/bin/bash"
+					},
+					"zsh": {
+						"path": "/bin/zsh"
+					}
+				}
+			}
+		}
+	},
+	"runArgs": [
+		"--privileged"
+	],
+	"mounts": [
+		// {
+		// 	"type": "bind",
+		// 	"source": "/path/on/host",
+		// 	"target": "/path/in/container"
+		// }
+	]
+}
