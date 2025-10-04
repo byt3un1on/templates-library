@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Pre-Launch Tasks",
+            "dependsOn": [
+                "Run Coverage Report Script"
+            ]
+        },
+        {
+            "label": "Run Coverage Report Script",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "cover"
+            ],
+            "problemMatcher": [],
+            "group": "build",
+            "detail": "Executando o script coverage.sh"
+        }
+    ]
+}
